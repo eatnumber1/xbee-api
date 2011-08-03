@@ -168,6 +168,14 @@ RF module status messages are sent from the module in response to specific condi
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All subclasses must implement to parse the packet from the input stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.html#setStatus(com.rapplogic.xbee.api.ModemStatusResponse.Status)">setStatus</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api">ModemStatusResponse.Status</A>&nbsp;status)</CODE>
 
@@ -255,6 +263,29 @@ public void <B>setStatus</B>(<A HREF="../../../../com/rapplogic/xbee/api/ModemSt
 </DD>
 <DD><DL>
 </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parse(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
+parse</H3>
+<PRE>
+protected void <B>parse</B>(<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
+              throws java.io.IOException</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">XBeeResponse</A></CODE></B></DD>
+<DD>All subclasses must implement to parse the packet from the input stream.
+ The subclass must parse all bytes in the packet starting after the API_ID, and
+ up to but not including the checksum.  Reading either more or less bytes that expected will
+ result in an error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A></CODE> in class <CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
 </DL>
 <HR>

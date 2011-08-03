@@ -101,7 +101,7 @@ java.lang.Object
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>ZNetRxBaseResponse</B><DT>extends <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></DL>
+<DT><PRE>public abstract class <B>ZNetRxBaseResponse</B><DT>extends <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></DL>
 </PRE>
 
 <P>
@@ -190,6 +190,22 @@ Series 2 XBee.  Super class of all Receive packets.
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseAddress(com.rapplogic.xbee.api.IPacketParser)">parseAddress</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseOption(com.rapplogic.xbee.api.IPacketParser)">parseOption</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setOption(com.rapplogic.xbee.api.zigbee.ZNetRxBaseResponse.Option)">setOption</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.Option.html" title="enum in com.rapplogic.xbee.api.zigbee">ZNetRxBaseResponse.Option</A>&nbsp;option)</CODE>
 
@@ -227,7 +243,7 @@ Series 2 XBee.  Super class of all Receive packets.
 <TH ALIGN="left"><B>Methods inherited from class com.rapplogic.xbee.api.<A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#equals(java.lang.Object)">equals</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#finish()">finish</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getApiId()">getApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getChecksum()">getChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getLength()">getLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getPacketBytes()">getPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getProcessedPacketBytes()">getProcessedPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getRawPacketBytes()">getRawPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#hashCode()">hashCode</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#isError()">isError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setApiId(com.rapplogic.xbee.api.ApiId)">setApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setChecksum(int)">setChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setError(boolean)">setError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setLength(com.rapplogic.xbee.api.XBeePacketLength)">setLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setRawPacketBytes(int[])">setRawPacketBytes</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#equals(java.lang.Object)">equals</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#finish()">finish</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getApiId()">getApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getChecksum()">getChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getLength()">getLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getPacketBytes()">getPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getProcessedPacketBytes()">getProcessedPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getRawPacketBytes()">getRawPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#hashCode()">hashCode</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#isError()">isError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setApiId(com.rapplogic.xbee.api.ApiId)">setApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setChecksum(int)">setChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setError(boolean)">setError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setLength(com.rapplogic.xbee.api.XBeePacketLength)">setLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setRawPacketBytes(int[])">setRawPacketBytes</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -331,6 +347,34 @@ public void <B>setOption</B>(<A HREF="../../../../../com/rapplogic/xbee/api/zigb
 <DL>
 <DD><DL>
 </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseAddress(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
+parseAddress</H3>
+<PRE>
+protected void <B>parseAddress</B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
+                     throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseOption(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
+parseOption</H3>
+<PRE>
+protected void <B>parseOption</B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
+                    throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
 </DL>
 <HR>

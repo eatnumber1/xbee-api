@@ -176,6 +176,14 @@ Series 2 XBee. This packet is received when
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All subclasses must implement to parse the packet from the input stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html#setData(int[])">setData</A></B>(int[]&nbsp;data)</CODE>
 
 <BR>
@@ -196,7 +204,7 @@ Series 2 XBee. This packet is received when
 <TH ALIGN="left"><B>Methods inherited from class com.rapplogic.xbee.api.zigbee.<A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxBaseResponse</A></B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getOption()">getOption</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getRemoteAddress16()">getRemoteAddress16</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getRemoteAddress64()">getRemoteAddress64</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setOption(com.rapplogic.xbee.api.zigbee.ZNetRxBaseResponse.Option)">setOption</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setRemoteAddress16(com.rapplogic.xbee.api.XBeeAddress16)">setRemoteAddress16</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setRemoteAddress64(com.rapplogic.xbee.api.XBeeAddress64)">setRemoteAddress64</A></CODE></TD>
+<TD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getOption()">getOption</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getRemoteAddress16()">getRemoteAddress16</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#getRemoteAddress64()">getRemoteAddress64</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseAddress(com.rapplogic.xbee.api.IPacketParser)">parseAddress</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseOption(com.rapplogic.xbee.api.IPacketParser)">parseOption</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setOption(com.rapplogic.xbee.api.zigbee.ZNetRxBaseResponse.Option)">setOption</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setRemoteAddress16(com.rapplogic.xbee.api.XBeeAddress16)">setRemoteAddress16</A>, <A HREF="../../../../../com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#setRemoteAddress64(com.rapplogic.xbee.api.XBeeAddress64)">setRemoteAddress64</A></CODE></TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_com.rapplogic.xbee.api.XBeeResponse"><!-- --></A>
@@ -271,6 +279,29 @@ public void <B>setData</B>(int[]&nbsp;data)</PRE>
 </DD>
 <DD><DL>
 </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parse(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
+parse</H3>
+<PRE>
+public void <B>parse</B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
+           throws java.io.IOException</PRE>
+<DL>
+<DD><B>Description copied from class: <CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">XBeeResponse</A></CODE></B></DD>
+<DD>All subclasses must implement to parse the packet from the input stream.
+ The subclass must parse all bytes in the packet starting after the API_ID, and
+ up to but not including the checksum.  Reading either more or less bytes that expected will
+ result in an error.
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A></CODE> in class <CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
 </DL>
 <HR>

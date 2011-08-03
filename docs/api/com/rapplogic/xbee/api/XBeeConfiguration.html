@@ -136,7 +136,7 @@ java.lang.Object
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api">ResponseQueueFilter</A></CODE></FONT></TD>
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api">ResponseFilter</A></CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#getResponseQueueFilter()">getResponseQueueFilter</A></B>()</CODE>
 
 <BR>
@@ -146,6 +146,14 @@ java.lang.Object
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#getSendSynchronousTimeout()">getSendSynchronousTimeout</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#isShutdownHook()">isShutdownHook</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -177,7 +185,7 @@ java.lang.Object
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#withResponseQueueFilter(com.rapplogic.xbee.api.ResponseQueueFilter)">withResponseQueueFilter</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api">ResponseQueueFilter</A>&nbsp;filter)</CODE>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#withResponseQueueFilter(com.rapplogic.xbee.api.ResponseFilter)">withResponseQueueFilter</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api">ResponseFilter</A>&nbsp;filter)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -189,6 +197,14 @@ java.lang.Object
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html#withShutdownHook(boolean)">withShutdownHook</A></B>(boolean&nbsp;shutdownHook)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Controls is a startup check is performed when connecting to the XBee.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -238,6 +254,21 @@ public <B>XBeeConfiguration</B>()</PRE>
 </TR>
 </TABLE>
 
+<A NAME="withShutdownHook(boolean)"><!-- --></A><H3>
+withShutdownHook</H3>
+<PRE>
+public <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A> <B>withShutdownHook</B>(boolean&nbsp;shutdownHook)</PRE>
+<DL>
+<DD>Controls is a startup check is performed when connecting to the XBee.
+ The startup check attempts to determine the firmware type and if it is 
+ configured correctly for use with this software.  Default is true.
+<P>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>startupChecks</CODE> - </DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="withStartupChecks(boolean)"><!-- --></A><H3>
 withStartupChecks</H3>
 <PRE>
@@ -267,10 +298,10 @@ public <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title
 </DL>
 <HR>
 
-<A NAME="withResponseQueueFilter(com.rapplogic.xbee.api.ResponseQueueFilter)"><!-- --></A><H3>
+<A NAME="withResponseQueueFilter(com.rapplogic.xbee.api.ResponseFilter)"><!-- --></A><H3>
 withResponseQueueFilter</H3>
 <PRE>
-public <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A> <B>withResponseQueueFilter</B>(<A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api">ResponseQueueFilter</A>&nbsp;filter)</PRE>
+public <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A> <B>withResponseQueueFilter</B>(<A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api">ResponseFilter</A>&nbsp;filter)</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -328,7 +359,7 @@ public int <B>getMaxQueueSize</B>()</PRE>
 <A NAME="getResponseQueueFilter()"><!-- --></A><H3>
 getResponseQueueFilter</H3>
 <PRE>
-public <A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api">ResponseQueueFilter</A> <B>getResponseQueueFilter</B>()</PRE>
+public <A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api">ResponseFilter</A> <B>getResponseQueueFilter</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
@@ -340,6 +371,17 @@ public <A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" tit
 getSendSynchronousTimeout</H3>
 <PRE>
 public int <B>getSendSynchronousTimeout</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="isShutdownHook()"><!-- --></A><H3>
+isShutdownHook</H3>
+<PRE>
+public boolean <B>isShutdownHook</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>

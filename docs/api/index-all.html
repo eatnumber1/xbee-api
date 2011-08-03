@@ -79,8 +79,8 @@ function windowTitle()
 <A NAME="_A_"><!-- --></A><H2>
 <B>A</B></H2>
 <DL>
-<DT><A HREF="./com/rapplogic/xbee/api/ResponseQueueFilter.html#accept(com.rapplogic.xbee.api.XBeeResponse)"><B>accept(XBeeResponse)</B></A> - 
-Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api">ResponseQueueFilter</A>
+<DT><A HREF="./com/rapplogic/xbee/api/ResponseFilter.html#accept(com.rapplogic.xbee.api.XBeeResponse)"><B>accept(XBeeResponse)</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api">ResponseFilter</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#ADC_CHANNEL1"><B>ADC_CHANNEL1</B></A> - 
 Static variable in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>
@@ -165,7 +165,16 @@ Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/RxTxSerialComm.
 <DT><A HREF="./com/rapplogic/xbee/XBeeConnection.html#close()"><B>close()</B></A> - 
 Method in interface com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/package-summary.html"><B>com.rapplogic.xbee</B></A> - package com.rapplogic.xbee<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/package-summary.html"><B>com.rapplogic.xbee.api</B></A> - package com.rapplogic.xbee.api<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html"><B>com.rapplogic.xbee.api.wpan</B></A> - package com.rapplogic.xbee.api.wpan<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html"><B>com.rapplogic.xbee.api.zigbee</B></A> - package com.rapplogic.xbee.api.zigbee<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/util/package-summary.html"><B>com.rapplogic.xbee.util</B></A> - package com.rapplogic.xbee.util<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/Checksum.html#compute()"><B>compute()</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/IXBee.html#collectResponses(int, com.rapplogic.xbee.api.CollectTerminator)"><B>collectResponses(int, CollectTerminator)</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IXBee.html" title="interface in com.rapplogic.xbee.api">IXBee</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#collectResponses(int, com.rapplogic.xbee.api.CollectTerminator)"><B>collectResponses(int, CollectTerminator)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
+<DD>Collects responses until the timeout is reached or the CollectTerminator returns true
+<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#collectResponses(int)"><B>collectResponses(int)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
+<DD>Collects responses for wait milliseconds and returns responses as List
+<DT><A HREF="./com/rapplogic/xbee/api/CollectTerminator.html" title="interface in com.rapplogic.xbee.api"><B>CollectTerminator</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/package-summary.html"><B>com.rapplogic.xbee</B></A> - package com.rapplogic.xbee<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/package-summary.html"><B>com.rapplogic.xbee.api</B></A> - package com.rapplogic.xbee.api<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html"><B>com.rapplogic.xbee.api.wpan</B></A> - package com.rapplogic.xbee.api.wpan<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html"><B>com.rapplogic.xbee.api.zigbee</B></A> - package com.rapplogic.xbee.api.zigbee<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/util/package-summary.html"><B>com.rapplogic.xbee.util</B></A> - package com.rapplogic.xbee.util<DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/Checksum.html#compute()"><B>compute()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/Checksum.html" title="class in com.rapplogic.xbee.api">Checksum</A>
 <DD>Computes checksum and stores in checksum instance variable
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#containsAnalog()"><B>containsAnalog()</B></A> - 
@@ -283,8 +292,8 @@ Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbe
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html#get(com.rapplogic.xbee.api.AtCommandResponse)"><B>get(AtCommandResponse)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html" title="enum in com.rapplogic.xbee.api.zigbee">AssociationStatus</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html#get(int)"><B>get(int)</B></A> - 
-Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">NodeDiscover.DeviceType</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html#get(int)"><B>get(int)</B></A> - 
+Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover.DeviceType</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html#get(int)"><B>get(int)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html" title="enum in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest.ClusterId</A>
@@ -378,6 +387,12 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtComma
 <DT><A HREF="./com/rapplogic/xbee/api/AtCommandQueue.html#getApiId()"><B>getApiId()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtCommandQueue.html" title="class in com.rapplogic.xbee.api">AtCommandQueue</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getApiId()"><B>getApiId()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getApiId()"><B>getApiId()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/RemoteAtRequest.html#getApiId()"><B>getApiId()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/RemoteAtRequest.html" title="class in com.rapplogic.xbee.api">RemoteAtRequest</A>
 <DD>&nbsp;
@@ -417,6 +432,9 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeePacket.html#getByteArray()"><B>getByteArray()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeePacket.html" title="class in com.rapplogic.xbee.api">XBeePacket</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getBytesRead()"><B>getBytesRead()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getBytesRead()"><B>getBytesRead()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
@@ -502,8 +520,8 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html#getDestinationEndpoint()"><B>getDestinationEndpoint()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getDeviceType()"><B>getDeviceType()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getDeviceType()"><B>getDeviceType()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#getDeviceType()"><B>getDeviceType()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -562,6 +580,9 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxRequest.html#getFrameDataAsIntArrayOutputStream()"><B>getFrameDataAsIntArrayOutputStream()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetTxRequest</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getFrameDataBytesRead()"><B>getFrameDataBytesRead()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getFrameDataBytesRead()"><B>getFrameDataBytesRead()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>Returns number of bytes remaining, relative to the stated packet length (not including checksum).
@@ -580,6 +601,12 @@ Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/RxTxSerialComm.
 <DT><A HREF="./com/rapplogic/xbee/XBeeConnection.html#getInputStream()"><B>getInputStream()</B></A> - 
 Method in interface com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getIntApiId()"><B>getIntApiId()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getIntApiId()"><B>getIntApiId()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/IIntArray.html#getIntArray()"><B>getIntArray()</B></A> - 
 Method in interface com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IIntArray.html" title="interface in com.rapplogic.xbee.util">IIntArray</A>
 <DD>&nbsp;
@@ -588,6 +615,12 @@ Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IntAr
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/IntArrayOutputStream.html#getInternalList()"><B>getInternalList()</B></A> - 
 Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IntArrayOutputStream.html" title="class in com.rapplogic.xbee.util">IntArrayOutputStream</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getLength()"><B>getLength()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getLength()"><B>getLength()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeePacketLength.html#getLength()"><B>getLength()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeePacketLength.html" title="class in com.rapplogic.xbee.api">XBeePacketLength</A>
@@ -610,8 +643,8 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#getMaxQueueSize()"><B>getMaxQueueSize()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getMfgId()"><B>getMfgId()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getMfgId()"><B>getMfgId()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#getMfgId()"><B>getMfgId()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -631,23 +664,23 @@ Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IXB
 <DT><A HREF="./com/rapplogic/xbee/api/XBee.html#getNextFrameId()"><B>getNextFrameId()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
 <DD>This is useful for obtaining a frame id when composing your XBeeRequest.
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#getNodeAddress16()"><B>getNodeAddress16()</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeAddress16()"><B>getNodeAddress16()</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getNodeAddress16()"><B>getNodeAddress16()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getNodeAddress16()"><B>getNodeAddress16()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#getNodeAddress64()"><B>getNodeAddress64()</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeAddress64()"><B>getNodeAddress64()</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getNodeAddress64()"><B>getNodeAddress64()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getNodeAddress64()"><B>getNodeAddress64()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#getNodeIdentifier()"><B>getNodeIdentifier()</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeIdentifier()"><B>getNodeIdentifier()</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getNodeIdentifier()"><B>getNodeIdentifier()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getNodeIdentifier()"><B>getNodeIdentifier()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#getNodeIdentifier()"><B>getNodeIdentifier()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -682,8 +715,8 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeRes
 <DT><A HREF="./com/rapplogic/xbee/api/InputStreamThread.html#getPacketListenerList()"><B>getPacketListenerList()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/InputStreamThread.html" title="class in com.rapplogic.xbee.api">InputStreamThread</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getParent()"><B>getParent()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getParent()"><B>getParent()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#getParentAddress()"><B>getParentAddress()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -700,8 +733,8 @@ Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/XBeePin.html" t
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeResponse.html#getProcessedPacketBytes()"><B>getProcessedPacketBytes()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>
 <DD>Returns an array of all bytes (after being un-escaped) in the packet except the start byte.
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getProfileId()"><B>getProfileId()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getProfileId()"><B>getProfileId()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html#getProfileId()"><B>getProfileId()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitRxResponse</A>
@@ -715,6 +748,9 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeResponse.html#getRawPacketBytes()"><B>getRawPacketBytes()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>
 <DD>Returns an array all bytes (as received off radio, including escape bytes) in packet except the start byte.
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#getRemainingBytes()"><B>getRemainingBytes()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#getRemainingBytes()"><B>getRemainingBytes()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>Number of bytes remaining to be read, including the checksum
@@ -782,14 +818,17 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/InputSt
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#getResponseQueueFilter()"><B>getResponseQueueFilter()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#getResponseQueueSize()"><B>getResponseQueueSize()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
+<DD>Returns the number of packets available in the response queue for immediate consumption
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html#getRetryCount()"><B>getRetryCount()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetTxStatusResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#getRssi()"><B>getRssi()</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
-<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#getRssi()"><B>getRssi()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxBaseResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getRssi()"><B>getRssi()</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#getSamples()"><B>getSamples()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>
@@ -819,8 +858,8 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemSt
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html#getStatus()"><B>getStatus()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html" title="class in com.rapplogic.xbee.api.wpan">TxStatusResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#getStatus()"><B>getStatus()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#getStatus()"><B>getStatus()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#getSupplyVoltage()"><B>getSupplyVoltage()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>
@@ -852,8 +891,8 @@ Method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeePack
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html#getValue()"><B>getValue()</B></A> - 
 Method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html" title="enum in com.rapplogic.xbee.api.zigbee">AssociationStatus</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html#getValue()"><B>getValue()</B></A> - 
-Method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">NodeDiscover.DeviceType</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html#getValue()"><B>getValue()</B></A> - 
+Method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover.DeviceType</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html#getValue()"><B>getValue()</B></A> - 
 Method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html" title="enum in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest.ClusterId</A>
@@ -911,7 +950,10 @@ Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBe
 <DT><A HREF="./com/rapplogic/xbee/RxTxSerialEventListener.html#handleSerialEvent(gnu.io.SerialPortEvent)"><B>handleSerialEvent(SerialPortEvent)</B></A> - 
 Method in interface com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/RxTxSerialEventListener.html" title="interface in com.rapplogic.xbee">RxTxSerialEventListener</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/XBeeAddress16.html#hashCode()"><B>hashCode()</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.html" title="class in com.rapplogic.xbee.api"><B>HardwareVersion</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>Represents a XBee Address.<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.html#HardwareVersion()"><B>HardwareVersion()</B></A> - 
+Constructor for class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/HardwareVersion.html" title="class in com.rapplogic.xbee.api">HardwareVersion</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api"><B>HardwareVersion.RadioType</B></A> - Enum in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/XBeeAddress16.html#hashCode()"><B>hashCode()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeAddress64.html#hashCode()"><B>hashCode()</B></A> - 
@@ -928,7 +970,7 @@ Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/Doubl
 <A NAME="_I_"><!-- --></A><H2>
 <B>I</B></H2>
 <DL>
-<DT><A HREF="./com/rapplogic/xbee/util/IIntArray.html" title="interface in com.rapplogic.xbee.util"><B>IIntArray</B></A> - Interface in <A HREF="./com/rapplogic/xbee/util/package-summary.html">com.rapplogic.xbee.util</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util"><B>IIntArrayInputStream</B></A> - Interface in <A HREF="./com/rapplogic/xbee/util/package-summary.html">com.rapplogic.xbee.util</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#initProviderConnection(com.rapplogic.xbee.XBeeConnection)"><B>initProviderConnection(XBeeConnection)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/util/IIntArray.html" title="interface in com.rapplogic.xbee.util"><B>IIntArray</B></A> - Interface in <A HREF="./com/rapplogic/xbee/util/package-summary.html">com.rapplogic.xbee.util</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util"><B>IIntInputStream</B></A> - Interface in <A HREF="./com/rapplogic/xbee/util/package-summary.html">com.rapplogic.xbee.util</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#initProviderConnection(com.rapplogic.xbee.XBeeConnection)"><B>initProviderConnection(XBeeConnection)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
 <DD>Allows a protocol specific implementation of XBeeConnection to be used instead of the default RXTX connection.
 <DT><A HREF="./com/rapplogic/xbee/api/InputStreamThread.html" title="class in com.rapplogic.xbee.api"><B>InputStreamThread</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>Reads data from the input stream and hands off to PacketParser for packet parsing.<DT><A HREF="./com/rapplogic/xbee/api/InputStreamThread.html#InputStreamThread(com.rapplogic.xbee.XBeeConnection, com.rapplogic.xbee.api.XBeeConfiguration)"><B>InputStreamThread(XBeeConnection, XBeeConfiguration)</B></A> - 
@@ -949,7 +991,7 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/InputSt
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/IoSample.html" title="class in com.rapplogic.xbee.api.wpan"><B>IoSample</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html">com.rapplogic.xbee.api.wpan</A><DD>Series 1 XBee.<DT><A HREF="./com/rapplogic/xbee/api/wpan/IoSample.html#IoSample(com.rapplogic.xbee.api.wpan.RxResponseIoSample)"><B>IoSample(RxResponseIoSample)</B></A> - 
 Constructor for class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/IoSample.html" title="class in com.rapplogic.xbee.api.wpan">IoSample</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#isA0Enabled()"><B>isA0Enabled()</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api"><B>IPacketParser</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#isA0Enabled()"><B>isA0Enabled()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#isA0Enabled()"><B>isA0Enabled()</B></A> - 
@@ -1159,6 +1201,9 @@ Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wp
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html#isPurged()"><B>isPurged()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html" title="class in com.rapplogic.xbee.api.wpan">TxStatusResponse</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#isShutdownHook()"><B>isShutdownHook()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/RemoteAtResponse.html#isSixteenBitAddressUnknown()"><B>isSixteenBitAddressUnknown()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/RemoteAtResponse.html" title="class in com.rapplogic.xbee.api">RemoteAtResponse</A>
 <DD>&nbsp;
@@ -1202,13 +1247,7 @@ Constructor for class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/M
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeRequest.html#NO_RESPONSE_FRAME_ID"><B>NO_RESPONSE_FRAME_ID</B></A> - 
 Static variable in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeRequest.html" title="class in com.rapplogic.xbee.api">XBeeRequest</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan"><B>NodeDiscover</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html">com.rapplogic.xbee.api.wpan</A><DD>Series 1 XBee.<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#NodeDiscover()"><B>NodeDiscover()</B></A> - 
-Constructor for class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
-<DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee"><B>NodeDiscover</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html">com.rapplogic.xbee.api.zigbee</A><DD>Series 2 XBee.<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#NodeDiscover()"><B>NodeDiscover()</B></A> - 
-Constructor for class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
-<DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee"><B>NodeDiscover.DeviceType</B></A> - Enum in <A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html">com.rapplogic.xbee.api.zigbee</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/NoRequestResponse.html" title="interface in com.rapplogic.xbee.api"><B>NoRequestResponse</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>Indicates a Response that is initiated by a radio (i.e.</DL>
+<DT><A HREF="./com/rapplogic/xbee/api/NoRequestResponse.html" title="interface in com.rapplogic.xbee.api"><B>NoRequestResponse</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>This filter is used to capture only RX packets that are not a response to a TX packet.</DL>
 <HR>
 <A NAME="_O_"><!-- --></A><H2>
 <B>O</B></H2>
@@ -1243,36 +1282,99 @@ Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/RxTxSerialComm.
  Escaped bytes increase packet length but packet stated length only indicates un-escaped bytes.<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#PacketParser(java.io.InputStream)"><B>PacketParser(InputStream)</B></A> - 
 Constructor for class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#PacketParser(com.rapplogic.xbee.util.IIntArrayInputStream)"><B>PacketParser(IIntArrayInputStream)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#PacketParser(com.rapplogic.xbee.util.IIntInputStream)"><B>PacketParser(IIntInputStream)</B></A> - 
 Constructor for class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#parse(com.rapplogic.xbee.api.AtCommandResponse)"><B>parse(AtCommandResponse)</B></A> - 
-Static method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/AtCommandResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtCommandResponse.html" title="class in com.rapplogic.xbee.api">AtCommandResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#parse(com.rapplogic.xbee.util.IIntArrayInputStream)"><B>parse(IIntArrayInputStream)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/ErrorResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ErrorResponse.html" title="class in com.rapplogic.xbee.api">ErrorResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/GenericResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/GenericResponse.html" title="class in com.rapplogic.xbee.api">GenericResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.html#parse(com.rapplogic.xbee.api.AtCommandResponse)"><B>parse(AtCommandResponse)</B></A> - 
+Static method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/HardwareVersion.html" title="class in com.rapplogic.xbee.api">HardwareVersion</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.html" title="class in com.rapplogic.xbee.api">ModemStatusResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/RemoteAtResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/RemoteAtResponse.html" title="class in com.rapplogic.xbee.api">RemoteAtResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponse16.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponse16.html" title="class in com.rapplogic.xbee.api.wpan">RxResponse16</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponse64.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponse64.html" title="class in com.rapplogic.xbee.api.wpan">RxResponse64</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#parse(com.rapplogic.xbee.api.AtCommandResponse)"><B>parse(AtCommandResponse)</B></A> - 
-Static method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html" title="class in com.rapplogic.xbee.api.wpan">TxStatusResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#parse(com.rapplogic.xbee.util.IIntArrayInputStream)"><B>parse(IIntArrayInputStream)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#parse(com.rapplogic.xbee.api.AtCommandResponse)"><B>parse(AtCommandResponse)</B></A> - 
+Static method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>
+<DD>All subclasses must implement to parse the packet from the input stream.
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#parse(com.rapplogic.xbee.api.AtCommandResponse)"><B>parse(AtCommandResponse)</B></A> - 
+Static method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitRxResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>
-<DD>This method is a bit non standard since it needs to parse an IO sample
- from either a RX response or a Remote AT/Local AT response (IS).
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)"><B>parse(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetTxStatusResponse</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/ByteUtils.html#parse10BitAnalog(int, int)"><B>parse10BitAnalog(int, int)</B></A> - 
 Static method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/ByteUtils.html" title="class in com.rapplogic.xbee.util">ByteUtils</A>
 <DD>Parses a 10-bit analog value from the input stream
-<DT><A HREF="./com/rapplogic/xbee/util/ByteUtils.html#parse10BitAnalog(com.rapplogic.xbee.util.IIntArrayInputStream, int)"><B>parse10BitAnalog(IIntArrayInputStream, int)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/util/ByteUtils.html#parse10BitAnalog(com.rapplogic.xbee.util.IIntInputStream, int)"><B>parse10BitAnalog(IIntInputStream, int)</B></A> - 
 Static method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/ByteUtils.html" title="class in com.rapplogic.xbee.util">ByteUtils</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseAddress(com.rapplogic.xbee.api.IPacketParser)"><B>parseAddress(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxBaseResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#parseAddress16()"><B>parseAddress16()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#parseAddress16()"><B>parseAddress16()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#parseAddress64()"><B>parseAddress64()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#parseAddress64()"><B>parseAddress64()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#parseBase(com.rapplogic.xbee.api.IPacketParser)"><B>parseBase(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxBaseResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#parseIoSample(com.rapplogic.xbee.util.IIntInputStream)"><B>parseIoSample(IIntInputStream)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>
+<DD>This method is a bit non standard since it needs to parse an IO sample
+ from either a RX response or a Remote AT/Local AT response (IS).
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#parseIsSample(com.rapplogic.xbee.api.AtCommandResponse)"><B>parseIsSample(AtCommandResponse)</B></A> - 
 Static method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html#parseOption(com.rapplogic.xbee.api.IPacketParser)"><B>parseOption(IPacketParser)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxBaseResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxBaseResponse</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#parsePacket()"><B>parsePacket()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
@@ -1292,6 +1394,9 @@ Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/Pac
 <A NAME="_R_"><!-- --></A><H2>
 <B>R</B></H2>
 <DL>
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#read(java.lang.String)"><B>read(String)</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#read(java.lang.String)"><B>read(String)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>Same as read() but logs the context of the byte being read.
@@ -1299,11 +1404,11 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketP
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
 <DD>This method reads bytes from the underlying input stream and performs the following tasks:
  1.
-<DT><A HREF="./com/rapplogic/xbee/util/IIntArrayInputStream.html#read()"><B>read()</B></A> - 
-Method in interface com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A>
+<DT><A HREF="./com/rapplogic/xbee/util/IIntInputStream.html#read()"><B>read()</B></A> - 
+Method in interface com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/util/IIntArrayInputStream.html#read(java.lang.String)"><B>read(String)</B></A> - 
-Method in interface com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A>
+<DT><A HREF="./com/rapplogic/xbee/util/IIntInputStream.html#read(java.lang.String)"><B>read(String)</B></A> - 
+Method in interface com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/InputStreamWrapper.html#read()"><B>read()</B></A> - 
 Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/InputStreamWrapper.html" title="class in com.rapplogic.xbee.util">InputStreamWrapper</A>
@@ -1319,6 +1424,15 @@ Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IntAr
 <DD>Reads <i>size</i> bytes from the input stream and returns the bytes in an array
 <DT><A HREF="./com/rapplogic/xbee/util/IntArrayInputStream.html#read(java.lang.String)"><B>read(String)</B></A> - 
 Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IntArrayInputStream.html" title="class in com.rapplogic.xbee.util">IntArrayInputStream</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/IPacketParser.html#readRemainingBytes()"><B>readRemainingBytes()</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/PacketParser.html#readRemainingBytes()"><B>readRemainingBytes()</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A>
+<DD>Reads all remaining bytes except for checksum
+<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#registerResponseHandler(int, java.lang.Class)"><B>registerResponseHandler(int, Class&lt;? extends XBeeResponse&gt;)</B></A> - 
+Static method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/RemoteAtRequest.html" title="class in com.rapplogic.xbee.api"><B>RemoteAtRequest</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>Supported by both series 1 (10C8 firmware and later) and series 2.<DT><A HREF="./com/rapplogic/xbee/api/RemoteAtRequest.html#RemoteAtRequest(int, com.rapplogic.xbee.api.XBeeAddress64, com.rapplogic.xbee.api.XBeeAddress16, boolean, java.lang.String, int[])"><B>RemoteAtRequest(int, XBeeAddress64, XBeeAddress16, boolean, String, int[])</B></A> - 
 Constructor for class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/RemoteAtRequest.html" title="class in com.rapplogic.xbee.api">RemoteAtRequest</A>
@@ -1352,7 +1466,7 @@ Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IXB
 <DT><A HREF="./com/rapplogic/xbee/api/XBee.html#removePacketListener(com.rapplogic.xbee.api.PacketListener)"><B>removePacketListener(PacketListener)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api"><B>ResponseQueueFilter</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/InputStreamThread.html#run()"><B>run()</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api"><B>ResponseFilter</B></A> - Interface in <A HREF="./com/rapplogic/xbee/api/package-summary.html">com.rapplogic.xbee.api</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/InputStreamThread.html#run()"><B>run()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/InputStreamThread.html" title="class in com.rapplogic.xbee.api">InputStreamThread</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan"><B>RxBaseResponse</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html">com.rapplogic.xbee.api.wpan</A><DD>Series 1 XBee.<DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#RxBaseResponse()"><B>RxBaseResponse()</B></A> - 
@@ -1528,8 +1642,8 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html#setDestinationEndpoint(int)"><B>setDestinationEndpoint(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setDeviceType(com.rapplogic.xbee.api.zigbee.NodeDiscover.DeviceType)"><B>setDeviceType(NodeDiscover.DeviceType)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setDeviceType(com.rapplogic.xbee.api.zigbee.ZBNodeDiscover.DeviceType)"><B>setDeviceType(ZBNodeDiscover.DeviceType)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#setDeviceType(com.rapplogic.xbee.api.zigbee.ZNetNodeIdentificationResponse.DeviceType)"><B>setDeviceType(ZNetNodeIdentificationResponse.DeviceType)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -1582,8 +1696,8 @@ Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wp
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxRequest.html#setMaxPayloadSize(int)"><B>setMaxPayloadSize(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetTxRequest</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setMfgId(int[])"><B>setMfgId(int[])</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setMfgId(int[])"><B>setMfgId(int[])</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#setMfgId(com.rapplogic.xbee.util.DoubleByte)"><B>setMfgId(DoubleByte)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -1597,23 +1711,23 @@ Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/Doubl
 <DT><A HREF="./com/rapplogic/xbee/XBeePin.html#setName(java.lang.String)"><B>setName(String)</B></A> - 
 Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/XBeePin.html" title="class in com.rapplogic.xbee">XBeePin</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)"><B>setNodeAddress16(XBeeAddress16)</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)"><B>setNodeAddress16(XBeeAddress16)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)"><B>setNodeAddress16(XBeeAddress16)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)"><B>setNodeAddress16(XBeeAddress16)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)"><B>setNodeAddress64(XBeeAddress64)</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)"><B>setNodeAddress64(XBeeAddress64)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)"><B>setNodeAddress64(XBeeAddress64)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)"><B>setNodeAddress64(XBeeAddress64)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#setNodeIdentifier(java.lang.String)"><B>setNodeIdentifier(String)</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeIdentifier(java.lang.String)"><B>setNodeIdentifier(String)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setNodeIdentifier(java.lang.String)"><B>setNodeIdentifier(String)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setNodeIdentifier(java.lang.String)"><B>setNodeIdentifier(String)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#setNodeIdentifier(java.lang.String)"><B>setNodeIdentifier(String)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -1633,8 +1747,8 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#setOptions(int)"><B>setOptions(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxBaseResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setParent(com.rapplogic.xbee.api.XBeeAddress16)"><B>setParent(XBeeAddress16)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setParent(com.rapplogic.xbee.api.XBeeAddress16)"><B>setParent(XBeeAddress16)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html#setParentAddress(com.rapplogic.xbee.api.XBeeAddress16)"><B>setParentAddress(XBeeAddress16)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetNodeIdentificationResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetNodeIdentificationResponse</A>
@@ -1648,8 +1762,8 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/XBeePin.html#setPin(java.lang.Integer)"><B>setPin(Integer)</B></A> - 
 Method in class com.rapplogic.xbee.<A HREF="./com/rapplogic/xbee/XBeePin.html" title="class in com.rapplogic.xbee">XBeePin</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setProfileId(int[])"><B>setProfileId(int[])</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setProfileId(int[])"><B>setProfileId(int[])</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html#setProfileId(com.rapplogic.xbee.util.DoubleByte)"><B>setProfileId(DoubleByte)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitRxResponse</A>
@@ -1705,11 +1819,11 @@ Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html#setRetryCount(int)"><B>setRetryCount(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetTxStatusResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetTxStatusResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#setRssi(int)"><B>setRssi(int)</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
-<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#setRssi(int)"><B>setRssi(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxBaseResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setRssi(int)"><B>setRssi(int)</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html#setSamples(com.rapplogic.xbee.api.wpan.IoSample[])"><B>setSamples(IoSample[])</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>
@@ -1735,8 +1849,8 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemSt
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html#setStatus(com.rapplogic.xbee.api.wpan.TxStatusResponse.Status)"><B>setStatus(TxStatusResponse.Status)</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html" title="class in com.rapplogic.xbee.api.wpan">TxStatusResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#setStatus(int)"><B>setStatus(int)</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#setStatus(int)"><B>setStatus(int)</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html#setSupplyVoltage(java.lang.Integer)"><B>setSupplyVoltage(Integer)</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>
@@ -1746,6 +1860,9 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtComma
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/AtCommandResponse.html#setValue(int[])"><B>setValue(int[])</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtCommandResponse.html" title="class in com.rapplogic.xbee.api">AtCommandResponse</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/CollectTerminator.html#stop(com.rapplogic.xbee.api.XBeeResponse)"><B>stop(XBeeResponse)</B></A> - 
+Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/CollectTerminator.html" title="interface in com.rapplogic.xbee.api">CollectTerminator</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/ByteUtils.html#stringToIntArray(java.lang.String)"><B>stringToIntArray(String)</B></A> - 
 Static method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/ByteUtils.html" title="class in com.rapplogic.xbee.util">ByteUtils</A>
@@ -1788,6 +1905,9 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtComma
 <DT><A HREF="./com/rapplogic/xbee/api/ErrorResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ErrorResponse.html" title="class in com.rapplogic.xbee.api">ErrorResponse</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html#toString()"><B>toString()</B></A> - 
+Method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api">HardwareVersion.RadioType</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.html" title="class in com.rapplogic.xbee.api">ModemStatusResponse</A>
 <DD>&nbsp;
@@ -1799,9 +1919,6 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/RemoteA
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/IoSample.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/IoSample.html" title="class in com.rapplogic.xbee.api.wpan">IoSample</A>
-<DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html#toString()"><B>toString()</B></A> - 
-Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/NodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">NodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/RxBaseResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxBaseResponse</A>
@@ -1824,6 +1941,9 @@ Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wp
 <DT><A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/TxStatusResponse.html" title="class in com.rapplogic.xbee.api.wpan">TxStatusResponse</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#toString()"><B>toString()</B></A> - 
+Method in class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeAddress.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api">XBeeAddress</A>
 <DD>&nbsp;
@@ -1839,8 +1959,8 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeReq
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>
 <DD>&nbsp;
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html#toString()"><B>toString()</B></A> - 
-Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">NodeDiscover</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#toString()"><B>toString()</B></A> - 
+Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html#toString()"><B>toString()</B></A> - 
 Method in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitRxResponse</A>
@@ -1907,6 +2027,9 @@ Constructor for class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/
 <DT><A HREF="./com/rapplogic/xbee/api/XBeePacket.html#unEscapePacket(int[])"><B>unEscapePacket(int[])</B></A> - 
 Static method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeePacket.html" title="class in com.rapplogic.xbee.api">XBeePacket</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBee.html#unRegisterResponseHandler(int)"><B>unRegisterResponseHandler(int)</B></A> - 
+Static method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api">XBee</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/IXBee.html#updateFrameId(int)"><B>updateFrameId(int)</B></A> - 
 Method in interface com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/IXBee.html" title="interface in com.rapplogic.xbee.api">IXBee</A>
 <DD>&nbsp;
@@ -1924,6 +2047,9 @@ Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/A
 <DT><A HREF="./com/rapplogic/xbee/api/AtCommandResponse.Status.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtCommandResponse.Status.html" title="enum in com.rapplogic.xbee.api">AtCommandResponse.Status</A>
 <DD>Returns the enum constant of this type with the specified name.
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
+Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api">HardwareVersion.RadioType</A>
+<DD>Returns the enum constant of this type with the specified name.
 <DT><A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.Status.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api">ModemStatusResponse.Status</A>
 <DD>Returns the enum constant of this type with the specified name.
@@ -1939,8 +2065,8 @@ Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/X
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html" title="enum in com.rapplogic.xbee.api.zigbee">AssociationStatus</A>
 <DD>Returns the enum constant of this type with the specified name.
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
-Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">NodeDiscover.DeviceType</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
+Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover.DeviceType</A>
 <DD>Returns the enum constant of this type with the specified name.
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html#valueOf(java.lang.String)"><B>valueOf(String)</B></A> - 
 Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html" title="enum in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest.ClusterId</A>
@@ -1980,6 +2106,10 @@ the order they are declared.
 Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/AtCommandResponse.Status.html" title="enum in com.rapplogic.xbee.api">AtCommandResponse.Status</A>
 <DD>Returns an array containing the constants of this enum type, in
 the order they are declared.
+<DT><A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html#values()"><B>values()</B></A> - 
+Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api">HardwareVersion.RadioType</A>
+<DD>Returns an array containing the constants of this enum type, in
+the order they are declared.
 <DT><A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.Status.html#values()"><B>values()</B></A> - 
 Static method in enum com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/ModemStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api">ModemStatusResponse.Status</A>
 <DD>Returns an array containing the constants of this enum type, in
@@ -2000,8 +2130,8 @@ the order they are declared.
 Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/AssociationStatus.html" title="enum in com.rapplogic.xbee.api.zigbee">AssociationStatus</A>
 <DD>Returns an array containing the constants of this enum type, in
 the order they are declared.
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html#values()"><B>values()</B></A> - 
-Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/NodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">NodeDiscover.DeviceType</A>
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html#values()"><B>values()</B></A> - 
+Static method in enum com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover.DeviceType</A>
 <DD>Returns an array containing the constants of this enum type, in
 the order they are declared.
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.ClusterId.html#values()"><B>values()</B></A> - 
@@ -2061,15 +2191,21 @@ Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeCon
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withNoRequestResponseQueueFilter()"><B>withNoRequestResponseQueueFilter()</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>Only adds responses that implement NoRequestResponse
-<DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withResponseQueueFilter(com.rapplogic.xbee.api.ResponseQueueFilter)"><B>withResponseQueueFilter(ResponseQueueFilter)</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withResponseQueueFilter(com.rapplogic.xbee.api.ResponseFilter)"><B>withResponseQueueFilter(ResponseFilter)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withSendSynchronousTimeout(int)"><B>withSendSynchronousTimeout(int)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withShutdownHook(boolean)"><B>withShutdownHook(boolean)</B></A> - 
+Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
+<DD>Controls is a startup check is performed when connecting to the XBee.
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html#withStartupChecks(boolean)"><B>withStartupChecks(boolean)</B></A> - 
 Method in class com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>
 <DD>Controls is a startup check is performed when connecting to the XBee.
+<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan"><B>WpanNodeDiscover</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/wpan/package-summary.html">com.rapplogic.xbee.api.wpan</A><DD>Series 1 XBee.<DT><A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#WpanNodeDiscover()"><B>WpanNodeDiscover()</B></A> - 
+Constructor for class com.rapplogic.xbee.api.wpan.<A HREF="./com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A>
+<DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/util/IntArrayOutputStream.html#write(int)"><B>write(int)</B></A> - 
 Method in class com.rapplogic.xbee.util.<A HREF="./com/rapplogic/xbee/util/IntArrayOutputStream.html" title="class in com.rapplogic.xbee.util">IntArrayOutputStream</A>
 <DD>&nbsp;
@@ -2170,7 +2306,10 @@ Constructor for exception com.rapplogic.xbee.api.<A HREF="./com/rapplogic/xbee/a
 <DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBForceSampleRequest.html" title="class in com.rapplogic.xbee.api.zigbee"><B>ZBForceSampleRequest</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html">com.rapplogic.xbee.api.zigbee</A><DD>Uses Remote AT to send a Force Sample (IS) AT command to a remote XBee<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBForceSampleRequest.html#ZBForceSampleRequest(com.rapplogic.xbee.api.XBeeAddress64)"><B>ZBForceSampleRequest(XBeeAddress64)</B></A> - 
 Constructor for class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBForceSampleRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZBForceSampleRequest</A>
 <DD>Creates a Force Sample Remote AT request
-<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html#zdoProfileId"><B>zdoProfileId</B></A> - 
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee"><B>ZBNodeDiscover</B></A> - Class in <A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html">com.rapplogic.xbee.api.zigbee</A><DD>Series 2 XBee.<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html#ZBNodeDiscover()"><B>ZBNodeDiscover()</B></A> - 
+Constructor for class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.html" title="class in com.rapplogic.xbee.api.zigbee">ZBNodeDiscover</A>
+<DD>&nbsp;
+<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZBNodeDiscover.DeviceType.html" title="enum in com.rapplogic.xbee.api.zigbee"><B>ZBNodeDiscover.DeviceType</B></A> - Enum in <A HREF="./com/rapplogic/xbee/api/zigbee/package-summary.html">com.rapplogic.xbee.api.zigbee</A><DD>&nbsp;<DT><A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html#zdoProfileId"><B>zdoProfileId</B></A> - 
 Static variable in class com.rapplogic.xbee.api.zigbee.<A HREF="./com/rapplogic/xbee/api/zigbee/ZNetExplicitTxRequest.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitTxRequest</A>
 <DD>&nbsp;
 <DT><A HREF="./com/rapplogic/xbee/api/XBeeAddress16.html#ZNET_BROADCAST"><B>ZNET_BROADCAST</B></A> - 

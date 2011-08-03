@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-NoRequestResponse
+ResponseFilter
 </TITLE>
 
 
@@ -13,7 +13,7 @@ NoRequestResponse
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="NoRequestResponse";
+        parent.document.title="ResponseFilter";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/PacketListener.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/RemoteAtResponse.html" title="class in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/rapplogic/xbee/api/NoRequestResponse.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="NoRequestResponse.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/rapplogic/xbee/api/ResponseFilter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResponseFilter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -73,9 +73,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;METHOD</FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;METHOD</FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -87,30 +87,56 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;METHOD</FONT></TD>
 <FONT SIZE="-1">
 com.rapplogic.xbee.api</FONT>
 <BR>
-Interface NoRequestResponse</H2>
-<DL>
-<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.html" title="class in com.rapplogic.xbee.api">ModemStatusResponse</A>, <A HREF="../../../../com/rapplogic/xbee/api/wpan/RxResponse16.html" title="class in com.rapplogic.xbee.api.wpan">RxResponse16</A>, <A HREF="../../../../com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A>, <A HREF="../../../../com/rapplogic/xbee/api/zigbee/ZNetExplicitRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetExplicitRxResponse</A>, <A HREF="../../../../com/rapplogic/xbee/api/zigbee/ZNetRxIoSampleResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxIoSampleResponse</A>, <A HREF="../../../../com/rapplogic/xbee/api/zigbee/ZNetRxResponse.html" title="class in com.rapplogic.xbee.api.zigbee">ZNetRxResponse</A></DD>
-</DL>
+Interface ResponseFilter</H2>
 <HR>
 <DL>
-<DT><PRE>public interface <B>NoRequestResponse</B></DL>
+<DT><PRE>public interface <B>ResponseFilter</B></DL>
 </PRE>
 
 <P>
-This filter is used to capture only RX packets that are not a response to a TX packet.
- This includes I/O samples, RX packets, modem status etc.
-<P>
-
-<P>
-<DL>
-<DT><B>Author:</B></DT>
-  <DD>andrew</DD>
-</DL>
 <HR>
 
 <P>
 
+<!-- ========== METHOD SUMMARY =========== -->
+
+<A NAME="method_summary"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
+<B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;boolean</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html#accept(com.rapplogic.xbee.api.XBeeResponse)">accept</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+</TABLE>
+&nbsp;
 <P>
+
+<!-- ============ METHOD DETAIL ========== -->
+
+<A NAME="method_detail"><!-- --></A>
+<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
+<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
+<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
+<B>Method Detail</B></FONT></TH>
+</TR>
+</TABLE>
+
+<A NAME="accept(com.rapplogic.xbee.api.XBeeResponse)"><!-- --></A><H3>
+accept</H3>
+<PRE>
+boolean <B>accept</B>(<A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
 <!-- ========= END OF CLASS DATA ========= -->
 <HR>
 
@@ -141,11 +167,11 @@ This filter is used to capture only RX packets that are not a response to a TX p
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ModemStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/PacketListener.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/RemoteAtResponse.html" title="class in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBee.html" title="class in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/rapplogic/xbee/api/NoRequestResponse.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="NoRequestResponse.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/rapplogic/xbee/api/ResponseFilter.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="ResponseFilter.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -162,9 +188,9 @@ This filter is used to capture only RX packets that are not a response to a TX p
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;METHOD</FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;METHOD</FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>

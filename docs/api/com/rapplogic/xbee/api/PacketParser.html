@@ -93,11 +93,11 @@ java.lang.Object
   <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.rapplogic.xbee.api.PacketParser</B>
 </PRE>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A></DD>
+<DT><B>All Implemented Interfaces:</B> <DD><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>, <A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>PacketParser</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A></DL>
+<DT><PRE>public class <B>PacketParser</B><DT>extends java.lang.Object<DT>implements <A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A>, <A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></DL>
 </PRE>
 
 <P>
@@ -128,7 +128,7 @@ Reads a packet from the input stream, verifies checksum and creates an XBeeRespo
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#PacketParser(com.rapplogic.xbee.util.IIntArrayInputStream)">PacketParser</A></B>(<A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A>&nbsp;in)</CODE>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#PacketParser(com.rapplogic.xbee.util.IIntInputStream)">PacketParser</A></B>(<A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A>&nbsp;in)</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -148,6 +148,14 @@ Reads a packet from the input stream, verifies checksum and creates an XBeeRespo
 <TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
 <TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
 <B>Method Summary</B></FONT></TH>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ApiId.html" title="enum in com.rapplogic.xbee.api">ApiId</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#getApiId()">getApiId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -172,6 +180,22 @@ Reads a packet from the input stream, verifies checksum and creates an XBeeRespo
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns number of bytes remaining, relative to the stated packet length (not including checksum).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#getIntApiId()">getIntApiId</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeePacketLength.html" title="class in com.rapplogic.xbee.api">XBeePacketLength</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#getLength()">getLength</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -233,6 +257,14 @@ Reads a packet from the input stream, verifies checksum and creates an XBeeRespo
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#readRemainingBytes()">readRemainingBytes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reads all remaining bytes except for checksum</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html#setBytesRead(int)">setBytesRead</A></B>(int&nbsp;bytesRead)</CODE>
 
@@ -278,10 +310,10 @@ public <B>PacketParser</B>(java.io.InputStream&nbsp;in)</PRE>
 </DL>
 <HR>
 
-<A NAME="PacketParser(com.rapplogic.xbee.util.IIntArrayInputStream)"><!-- --></A><H3>
+<A NAME="PacketParser(com.rapplogic.xbee.util.IIntInputStream)"><!-- --></A><H3>
 PacketParser</H3>
 <PRE>
-public <B>PacketParser</B>(<A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A>&nbsp;in)</PRE>
+public <B>PacketParser</B>(<A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A>&nbsp;in)</PRE>
 <DL>
 </DL>
 
@@ -322,7 +354,7 @@ public int <B>read</B>(java.lang.String&nbsp;context)
 <DD>Same as read() but logs the context of the byte being read.  useful for debugging
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html#read(java.lang.String)">read</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#read(java.lang.String)">read</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE><DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html#read(java.lang.String)">read</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -343,10 +375,30 @@ public int <B>read</B>()
  2. Un-escapes bytes if necessary and verifies the checksum.
 <P>
 <DD><DL>
-<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html#read()">read</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntArrayInputStream.html" title="interface in com.rapplogic.xbee.util">IIntArrayInputStream</A></CODE></DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html#read()">read</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/util/IIntInputStream.html" title="interface in com.rapplogic.xbee.util">IIntInputStream</A></CODE></DL>
 </DD>
 <DD><DL>
 
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="readRemainingBytes()"><!-- --></A><H3>
+readRemainingBytes</H3>
+<PRE>
+public int[] <B>readRemainingBytes</B>()
+                         throws java.io.IOException</PRE>
+<DL>
+<DD>Reads all remaining bytes except for checksum
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#readRemainingBytes()">readRemainingBytes</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD>
 <DT><B>Throws:</B>
 <DD><CODE>java.io.IOException</CODE></DL>
 </DD>
@@ -360,7 +412,7 @@ public <A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="cl
                              throws java.io.IOException</PRE>
 <DL>
 <DD><DL>
-</DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#parseAddress64()">parseAddress64</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -377,7 +429,7 @@ public <A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="cl
                              throws java.io.IOException</PRE>
 <DL>
 <DD><DL>
-</DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#parseAddress16()">parseAddress16</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -395,7 +447,7 @@ public int <B>getFrameDataBytesRead</B>()</PRE>
 <DD>Returns number of bytes remaining, relative to the stated packet length (not including checksum).
 <P>
 <DD><DL>
-</DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getFrameDataBytesRead()">getFrameDataBytesRead</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -412,7 +464,7 @@ public int <B>getRemainingBytes</B>()</PRE>
 <DD>Number of bytes remaining to be read, including the checksum
 <P>
 <DD><DL>
-</DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getRemainingBytes()">getRemainingBytes</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -429,7 +481,7 @@ public int <B>getBytesRead</B>()</PRE>
 <DD>Does not include any escape bytes
 <P>
 <DD><DL>
-</DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getBytesRead()">getBytesRead</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 
@@ -487,6 +539,48 @@ public int <B>getChecksum</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getLength()"><!-- --></A><H3>
+getLength</H3>
+<PRE>
+public <A HREF="../../../../com/rapplogic/xbee/api/XBeePacketLength.html" title="class in com.rapplogic.xbee.api">XBeePacketLength</A> <B>getLength</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getLength()">getLength</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getApiId()"><!-- --></A><H3>
+getApiId</H3>
+<PRE>
+public <A HREF="../../../../com/rapplogic/xbee/api/ApiId.html" title="enum in com.rapplogic.xbee.api">ApiId</A> <B>getApiId</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getApiId()">getApiId</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getIntApiId()"><!-- --></A><H3>
+getIntApiId</H3>
+<PRE>
+public int <B>getIntApiId</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getIntApiId()">getIntApiId</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A></CODE></DL>
 </DD>
 <DD><DL>
 </DL>

@@ -52,7 +52,7 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/rapplogic/xbee/api/XBee.html" target="_top"><B>FRAMES</B></A>  &nbsp;
@@ -171,6 +171,23 @@ This is an API for communicating with Digi XBee 802.15.4 and ZigBee radios
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#collectResponses(int)">collectResponses</A></B>(int&nbsp;wait)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collects responses for wait milliseconds and returns responses as List</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.util.List&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt;</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#collectResponses(int, com.rapplogic.xbee.api.CollectTerminator)">collectResponses</A></B>(int&nbsp;wait,
+                 <A HREF="../../../../com/rapplogic/xbee/api/CollectTerminator.html" title="interface in com.rapplogic.xbee.api">CollectTerminator</A>&nbsp;terminator)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collects responses until the timeout is reached or the CollectTerminator returns true</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;int</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#getCurrentFrameId()">getCurrentFrameId</A></B>()</CODE>
 
@@ -204,6 +221,14 @@ This is an API for communicating with Digi XBee 802.15.4 and ZigBee radios
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#getResponseQueueSize()">getResponseQueueSize</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns the number of packets available in the response queue for immediate consumption</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#initProviderConnection(com.rapplogic.xbee.XBeeConnection)">initProviderConnection</A></B>(<A HREF="../../../../com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A>&nbsp;connection)</CODE>
 
@@ -227,6 +252,15 @@ This is an API for communicating with Digi XBee 802.15.4 and ZigBee radios
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If XBeeConnection.startUpChecks is set to true (default), this method will check if the AP parameter
  is set correctly and attempt to update if AP=1.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#registerResponseHandler(int, java.lang.Class)">registerResponseHandler</A></B>(int&nbsp;apiId,
+                        java.lang.Class&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt;&nbsp;clazz)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -294,6 +328,14 @@ This is an API for communicating with Digi XBee 802.15.4 and ZigBee radios
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synchronous method for sending an XBeeRequest and obtaining the 
  corresponding response (response that has same frame id).</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBee.html#unRegisterResponseHandler(int)">unRegisterResponseHandler</A></B>(int&nbsp;apiId)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -369,6 +411,35 @@ public void <B>open</B>(java.lang.String&nbsp;port,
 
 <DT><B>Throws:</B>
 <DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeException.html" title="class in com.rapplogic.xbee.api">XBeeException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="registerResponseHandler(int, java.lang.Class)"><!-- --></A><H3>
+registerResponseHandler</H3>
+<PRE>
+public static void <B>registerResponseHandler</B>(int&nbsp;apiId,
+                                           java.lang.Class&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt;&nbsp;clazz)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="unRegisterResponseHandler(int)"><!-- --></A><H3>
+unRegisterResponseHandler</H3>
+<PRE>
+public static void <B>unRegisterResponseHandler</B>(int&nbsp;apiId)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+</DL>
 </DD>
 </DL>
 <HR>
@@ -646,6 +717,64 @@ public <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="cla
 </DL>
 <HR>
 
+<A NAME="collectResponses(int, com.rapplogic.xbee.api.CollectTerminator)"><!-- --></A><H3>
+collectResponses</H3>
+<PRE>
+public java.util.List&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt; <B>collectResponses</B>(int&nbsp;wait,
+                                                               <A HREF="../../../../com/rapplogic/xbee/api/CollectTerminator.html" title="interface in com.rapplogic.xbee.api">CollectTerminator</A>&nbsp;terminator)
+                                                        throws <A HREF="../../../../com/rapplogic/xbee/api/XBeeException.html" title="class in com.rapplogic.xbee.api">XBeeException</A></PRE>
+<DL>
+<DD>Collects responses until the timeout is reached or the CollectTerminator returns true
+<P>
+<DD><DL>
+<DT><B>Specified by:</B><DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/IXBee.html#collectResponses(int, com.rapplogic.xbee.api.CollectTerminator)">collectResponses</A></CODE> in interface <CODE><A HREF="../../../../com/rapplogic/xbee/api/IXBee.html" title="interface in com.rapplogic.xbee.api">IXBee</A></CODE></DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>wait</CODE> - <DD><CODE>terminator</CODE> - 
+<DT><B>Returns:</B><DD>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeException.html" title="class in com.rapplogic.xbee.api">XBeeException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="collectResponses(int)"><!-- --></A><H3>
+collectResponses</H3>
+<PRE>
+public java.util.List&lt;? extends <A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt; <B>collectResponses</B>(int&nbsp;wait)
+                                                        throws <A HREF="../../../../com/rapplogic/xbee/api/XBeeException.html" title="class in com.rapplogic.xbee.api">XBeeException</A></PRE>
+<DL>
+<DD>Collects responses for wait milliseconds and returns responses as List
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>wait</CODE> - 
+<DT><B>Returns:</B><DD>
+<DT><B>Throws:</B>
+<DD><CODE><A HREF="../../../../com/rapplogic/xbee/api/XBeeException.html" title="class in com.rapplogic.xbee.api">XBeeException</A></CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getResponseQueueSize()"><!-- --></A><H3>
+getResponseQueueSize</H3>
+<PRE>
+public int <B>getResponseQueueSize</B>()</PRE>
+<DL>
+<DD>Returns the number of packets available in the response queue for immediate consumption
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+
+<DT><B>Returns:</B><DD></DL>
+</DD>
+</DL>
+<HR>
+
 <A NAME="close()"><!-- --></A><H3>
 close</H3>
 <PRE>
@@ -775,7 +904,7 @@ public void <B>clearResponseQueue</B>()</PRE>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseQueueFilter.html" title="interface in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ResponseFilter.html" title="interface in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
 &nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
   <A HREF="../../../../index.html?com/rapplogic/xbee/api/XBee.html" target="_top"><B>FRAMES</B></A>  &nbsp;

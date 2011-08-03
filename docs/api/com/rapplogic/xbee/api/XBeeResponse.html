@@ -222,6 +222,14 @@ The super class of all XBee Receive packets
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>protected abstract &nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All subclasses must implement to parse the packet from the input stream.</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;void</CODE></FONT></TD>
 <TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html#setApiId(com.rapplogic.xbee.api.ApiId)">setApiId</A></B>(<A HREF="../../../../com/rapplogic/xbee/api/ApiId.html" title="enum in com.rapplogic.xbee.api">ApiId</A>&nbsp;apiId)</CODE>
 
@@ -504,6 +512,28 @@ public void <B>finish</B>()</PRE>
 </DD>
 <DD><DL>
 </DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parse(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
+parse</H3>
+<PRE>
+protected abstract void <B>parse</B>(<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
+                       throws java.io.IOException</PRE>
+<DL>
+<DD>All subclasses must implement to parse the packet from the input stream.
+ The subclass must parse all bytes in the packet starting after the API_ID, and
+ up to but not including the checksum.  Reading either more or less bytes that expected will
+ result in an error.
+<P>
+<DD><DL>
+</DL>
+</DD>
+<DD><DL>
+<DT><B>Parameters:</B><DD><CODE>parser</CODE> - 
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
 </DL>
 <HR>

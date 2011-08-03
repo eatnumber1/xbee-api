@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-RxBaseResponse
+WpanNodeDiscover
 </TITLE>
 
 
@@ -13,7 +13,7 @@ RxBaseResponse
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="RxBaseResponse";
+        parent.document.title="WpanNodeDiscover";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/IoSample.html" title="class in com.rapplogic.xbee.api.wpan"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxResponse.html" title="class in com.rapplogic.xbee.api.wpan"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/TxStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api.wpan"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../../index.html?com/rapplogic/xbee/api/wpan/RxBaseResponse.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="RxBaseResponse.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../../index.html?com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="WpanNodeDiscover.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -87,33 +87,21 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <FONT SIZE="-1">
 com.rapplogic.xbee.api.wpan</FONT>
 <BR>
-Class RxBaseResponse</H2>
+Class WpanNodeDiscover</H2>
 <PRE>
 java.lang.Object
-  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">com.rapplogic.xbee.api.XBeeResponse</A>
-      <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.rapplogic.xbee.api.wpan.RxBaseResponse</B>
+  <IMG SRC="../../../../../resources/inherit.gif" ALT="extended by "><B>com.rapplogic.xbee.api.wpan.WpanNodeDiscover</B>
 </PRE>
-<DL>
-<DT><B>All Implemented Interfaces:</B> <DD>java.io.Serializable</DD>
-</DL>
-<DL>
-<DT><B>Direct Known Subclasses:</B> <DD><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxResponse.html" title="class in com.rapplogic.xbee.api.wpan">RxResponse</A>, <A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxResponseIoSample.html" title="class in com.rapplogic.xbee.api.wpan">RxResponseIoSample</A></DD>
-</DL>
 <HR>
 <DL>
-<DT><PRE>public abstract class <B>RxBaseResponse</B><DT>extends <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></DL>
+<DT><PRE>public class <B>WpanNodeDiscover</B><DT>extends java.lang.Object</DL>
 </PRE>
 
 <P>
-Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
- <p/>
+Series 1 XBee.  Parses a Node Discover (ND) AT Command Response
 <P>
 
 <P>
-<DL>
-<DT><B>Author:</B></DT>
-  <DD>andrew</DD>
-<DT><B>See Also:</B><DD><A HREF="../../../../../serialized-form.html#com.rapplogic.xbee.api.wpan.RxBaseResponse">Serialized Form</A></DL>
 <HR>
 
 <P>
@@ -127,7 +115,7 @@ Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
 <B>Constructor Summary</B></FONT></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#RxBaseResponse()">RxBaseResponse</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#WpanNodeDiscover()">WpanNodeDiscover</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -144,73 +132,16 @@ Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#getOptions()">getOptions</A></B>()</CODE>
+<CODE>&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeAddress16()">getNodeAddress16</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;int</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#getRssi()">getRssi</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api">XBeeAddress</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#getSourceAddress()">getSourceAddress</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Returns either a XBeeAddress16 or XBeeAddress64
- depending on if the packet is configured for 16 or 64 bit addressing.</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#isAddressBroadcast()">isAddressBroadcast</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;boolean</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#isPanBroadcast()">isPanBroadcast</A></B>()</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>protected &nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#parseBase(com.rapplogic.xbee.api.IPacketParser)">parseBase</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#setOptions(int)">setOptions</A></B>(int&nbsp;options)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#setRssi(int)">setRssi</A></B>(int&nbsp;rssi)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#setSourceAddress(com.rapplogic.xbee.api.XBeeAddress)">setSourceAddress</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api">XBeeAddress</A>&nbsp;sourceAddress)</CODE>
+<CODE>&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeAddress64()">getNodeAddress64</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
@@ -218,19 +149,66 @@ Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
 <CODE>&nbsp;java.lang.String</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxBaseResponse.html#toString()">toString</A></B>()</CODE>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getNodeIdentifier()">getNodeIdentifier</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
-</TABLE>
-&nbsp;<A NAME="methods_inherited_from_class_com.rapplogic.xbee.api.XBeeResponse"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
-<TH ALIGN="left"><B>Methods inherited from class com.rapplogic.xbee.api.<A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></B></TH>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#getRssi()">getRssi</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#equals(java.lang.Object)">equals</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#finish()">finish</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getApiId()">getApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getChecksum()">getChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getLength()">getLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getPacketBytes()">getPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getProcessedPacketBytes()">getProcessedPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#getRawPacketBytes()">getRawPacketBytes</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#hashCode()">hashCode</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#isError()">isError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#parse(com.rapplogic.xbee.api.IPacketParser)">parse</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setApiId(com.rapplogic.xbee.api.ApiId)">setApiId</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setChecksum(int)">setChecksum</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setError(boolean)">setError</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setLength(com.rapplogic.xbee.api.XBeePacketLength)">setLength</A>, <A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#setRawPacketBytes(int[])">setRawPacketBytes</A></CODE></TD>
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>static&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#parse(com.rapplogic.xbee.api.AtCommandResponse)">parse</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/AtCommandResponse.html" title="class in com.rapplogic.xbee.api">AtCommandResponse</A>&nbsp;response)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)">setNodeAddress16</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A>&nbsp;my)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)">setNodeAddress64</A></B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A>&nbsp;serial)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setNodeIdentifier(java.lang.String)">setNodeIdentifier</A></B>(java.lang.String&nbsp;nodeIdentifier)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;void</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#setRssi(int)">setRssi</A></B>(int&nbsp;rssi)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;java.lang.String</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html#toString()">toString</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
@@ -239,7 +217,7 @@ Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
 <TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>clone, finalize, getClass, notify, notifyAll, wait, wait, wait</CODE></TD>
+<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, wait, wait, wait</CODE></TD>
 </TR>
 </TABLE>
 &nbsp;
@@ -255,10 +233,10 @@ Series 1 XBee.  Common elements of 16 and 64 bit Address Receive packets
 </TR>
 </TABLE>
 
-<A NAME="RxBaseResponse()"><!-- --></A><H3>
-RxBaseResponse</H3>
+<A NAME="WpanNodeDiscover()"><!-- --></A><H3>
+WpanNodeDiscover</H3>
 <PRE>
-public <B>RxBaseResponse</B>()</PRE>
+public <B>WpanNodeDiscover</B>()</PRE>
 <DL>
 </DL>
 
@@ -271,6 +249,97 @@ public <B>RxBaseResponse</B>()</PRE>
 <B>Method Detail</B></FONT></TH>
 </TR>
 </TABLE>
+
+<A NAME="parse(com.rapplogic.xbee.api.AtCommandResponse)"><!-- --></A><H3>
+parse</H3>
+<PRE>
+public static <A HREF="../../../../../com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" title="class in com.rapplogic.xbee.api.wpan">WpanNodeDiscover</A> <B>parse</B>(<A HREF="../../../../../com/rapplogic/xbee/api/AtCommandResponse.html" title="class in com.rapplogic.xbee.api">AtCommandResponse</A>&nbsp;response)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="toString()"><!-- --></A><H3>
+toString</H3>
+<PRE>
+public java.lang.String <B>toString</B>()</PRE>
+<DL>
+<DD><DL>
+<DT><B>Overrides:</B><DD><CODE>toString</CODE> in class <CODE>java.lang.Object</CODE></DL>
+</DD>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNodeAddress16()"><!-- --></A><H3>
+getNodeAddress16</H3>
+<PRE>
+public <A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A> <B>getNodeAddress16</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setNodeAddress16(com.rapplogic.xbee.api.XBeeAddress16)"><!-- --></A><H3>
+setNodeAddress16</H3>
+<PRE>
+public void <B>setNodeAddress16</B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A>&nbsp;my)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNodeAddress64()"><!-- --></A><H3>
+getNodeAddress64</H3>
+<PRE>
+public <A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A> <B>getNodeAddress64</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setNodeAddress64(com.rapplogic.xbee.api.XBeeAddress64)"><!-- --></A><H3>
+setNodeAddress64</H3>
+<PRE>
+public void <B>setNodeAddress64</B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A>&nbsp;serial)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getNodeIdentifier()"><!-- --></A><H3>
+getNodeIdentifier</H3>
+<PRE>
+public java.lang.String <B>getNodeIdentifier</B>()</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="setNodeIdentifier(java.lang.String)"><!-- --></A><H3>
+setNodeIdentifier</H3>
+<PRE>
+public void <B>setNodeIdentifier</B>(java.lang.String&nbsp;nodeIdentifier)</PRE>
+<DL>
+<DD><DL>
+</DL>
+</DD>
+</DL>
+<HR>
 
 <A NAME="getRssi()"><!-- --></A><H3>
 getRssi</H3>
@@ -288,104 +357,6 @@ setRssi</H3>
 <PRE>
 public void <B>setRssi</B>(int&nbsp;rssi)</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getOptions()"><!-- --></A><H3>
-getOptions</H3>
-<PRE>
-public int <B>getOptions</B>()</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setOptions(int)"><!-- --></A><H3>
-setOptions</H3>
-<PRE>
-public void <B>setOptions</B>(int&nbsp;options)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="isAddressBroadcast()"><!-- --></A><H3>
-isAddressBroadcast</H3>
-<PRE>
-public boolean <B>isAddressBroadcast</B>()</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="isPanBroadcast()"><!-- --></A><H3>
-isPanBroadcast</H3>
-<PRE>
-public boolean <B>isPanBroadcast</B>()</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="getSourceAddress()"><!-- --></A><H3>
-getSourceAddress</H3>
-<PRE>
-public <A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api">XBeeAddress</A> <B>getSourceAddress</B>()</PRE>
-<DL>
-<DD>Returns either a XBeeAddress16 or XBeeAddress64
- depending on if the packet is configured for 16 or 64 bit addressing.
-<P>
-<DD><DL>
-
-<DT><B>Returns:</B><DD></DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="setSourceAddress(com.rapplogic.xbee.api.XBeeAddress)"><!-- --></A><H3>
-setSourceAddress</H3>
-<PRE>
-public void <B>setSourceAddress</B>(<A HREF="../../../../../com/rapplogic/xbee/api/XBeeAddress.html" title="class in com.rapplogic.xbee.api">XBeeAddress</A>&nbsp;sourceAddress)</PRE>
-<DL>
-<DD><DL>
-</DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="parseBase(com.rapplogic.xbee.api.IPacketParser)"><!-- --></A><H3>
-parseBase</H3>
-<PRE>
-protected void <B>parseBase</B>(<A HREF="../../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api">IPacketParser</A>&nbsp;parser)
-                  throws java.io.IOException</PRE>
-<DL>
-<DD><DL>
-
-<DT><B>Throws:</B>
-<DD><CODE>java.io.IOException</CODE></DL>
-</DD>
-</DL>
-<HR>
-
-<A NAME="toString()"><!-- --></A><H3>
-toString</H3>
-<PRE>
-public java.lang.String <B>toString</B>()</PRE>
-<DL>
-<DD><DL>
-<DT><B>Overrides:</B><DD><CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html#toString()">toString</A></CODE> in class <CODE><A HREF="../../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A></CODE></DL>
-</DD>
 <DD><DL>
 </DL>
 </DD>
@@ -420,11 +391,11 @@ public java.lang.String <B>toString</B>()</PRE>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/IoSample.html" title="class in com.rapplogic.xbee.api.wpan"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/RxResponse.html" title="class in com.rapplogic.xbee.api.wpan"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../../com/rapplogic/xbee/api/wpan/TxStatusResponse.Status.html" title="enum in com.rapplogic.xbee.api.wpan"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;NEXT CLASS</FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../../index.html?com/rapplogic/xbee/api/wpan/RxBaseResponse.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="RxBaseResponse.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../../index.html?com/rapplogic/xbee/api/wpan/WpanNodeDiscover.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="WpanNodeDiscover.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {

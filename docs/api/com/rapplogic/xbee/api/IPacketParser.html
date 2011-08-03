@@ -3,7 +3,7 @@
 <HTML>
 <HEAD>
 <TITLE>
-InputStreamThread
+IPacketParser
 </TITLE>
 
 
@@ -13,7 +13,7 @@ InputStreamThread
 function windowTitle()
 {
     if (location.href.indexOf('is-external=true') == -1) {
-        parent.document.title="InputStreamThread";
+        parent.document.title="IPacketParser";
     }
 }
 </SCRIPT>
@@ -52,11 +52,11 @@ function windowTitle()
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html" title="class in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/IXBee.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/rapplogic/xbee/api/InputStreamThread.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="InputStreamThread.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/rapplogic/xbee/api/IPacketParser.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IPacketParser.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -73,9 +73,9 @@ function windowTitle()
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_top"></A>
@@ -87,51 +87,20 @@ DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&n
 <FONT SIZE="-1">
 com.rapplogic.xbee.api</FONT>
 <BR>
-Class InputStreamThread</H2>
-<PRE>
-java.lang.Object
-  <IMG SRC="../../../../resources/inherit.gif" ALT="extended by "><B>com.rapplogic.xbee.api.InputStreamThread</B>
-</PRE>
+Interface IPacketParser</H2>
 <DL>
-<DT><B>All Implemented Interfaces:</B> <DD>java.lang.Runnable</DD>
+<DT><B>All Known Implementing Classes:</B> <DD><A HREF="../../../../com/rapplogic/xbee/api/PacketParser.html" title="class in com.rapplogic.xbee.api">PacketParser</A></DD>
 </DL>
 <HR>
 <DL>
-<DT><PRE>public class <B>InputStreamThread</B><DT>extends java.lang.Object<DT>implements java.lang.Runnable</DL>
+<DT><PRE>public interface <B>IPacketParser</B></DL>
 </PRE>
 
 <P>
-Reads data from the input stream and hands off to PacketParser for packet parsing.
- Notifies XBee class when a new packet is parsed
- <p/>
-<P>
-
-<P>
-<DL>
-<DT><B>Author:</B></DT>
-  <DD>andrew</DD>
-</DL>
 <HR>
 
 <P>
 
-<!-- ======== CONSTRUCTOR SUMMARY ======== -->
-
-<A NAME="constructor_summary"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="2"><FONT SIZE="+2">
-<B>Constructor Summary</B></FONT></TH>
-</TR>
-<TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#InputStreamThread(com.rapplogic.xbee.XBeeConnection, com.rapplogic.xbee.api.XBeeConfiguration)">InputStreamThread</A></B>(<A HREF="../../../../com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A>&nbsp;connection,
-                  <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>&nbsp;conf)</CODE>
-
-<BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
-</TR>
-</TABLE>
-&nbsp;
 <!-- ========== METHOD SUMMARY =========== -->
 
 <A NAME="method_summary"><!-- --></A>
@@ -142,82 +111,87 @@ Reads data from the input stream and hands off to PacketParser for packet parsin
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.util.List&lt;<A HREF="../../../../com/rapplogic/xbee/api/PacketListener.html" title="interface in com.rapplogic.xbee.api">PacketListener</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#getPacketListenerList()">getPacketListenerList</A></B>()</CODE>
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/ApiId.html" title="enum in com.rapplogic.xbee.api">ApiId</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getApiId()">getApiId</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;java.util.concurrent.BlockingQueue&lt;<A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt;</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#getResponseQueue()">getResponseQueue</A></B>()</CODE>
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getBytesRead()">getBytesRead</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A></CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#getXBeeConnection()">getXBeeConnection</A></B>()</CODE>
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getFrameDataBytesRead()">getFrameDataBytesRead</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#interrupt()">interrupt</A></B>()</CODE>
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getIntApiId()">getIntApiId</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#run()">run</A></B>()</CODE>
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeePacketLength.html" title="class in com.rapplogic.xbee.api">XBeePacketLength</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getLength()">getLength</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
-<CODE>&nbsp;void</CODE></FONT></TD>
-<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html#setDone(boolean)">setDone</A></B>(boolean&nbsp;done)</CODE>
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#getRemainingBytes()">getRemainingBytes</A></B>()</CODE>
 
 <BR>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
-</TABLE>
-&nbsp;<A NAME="methods_inherited_from_class_java.lang.Object"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#EEEEFF" CLASS="TableSubHeadingColor">
-<TH ALIGN="left"><B>Methods inherited from class java.lang.Object</B></TH>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#parseAddress16()">parseAddress16</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
-<TD><CODE>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</CODE></TD>
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A></CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#parseAddress64()">parseAddress64</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#read(java.lang.String)">read</A></B>(java.lang.String&nbsp;context)</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
+</TR>
+<TR BGCOLOR="white" CLASS="TableRowColor">
+<TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
+<CODE>&nbsp;int[]</CODE></FONT></TD>
+<TD><CODE><B><A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html#readRemainingBytes()">readRemainingBytes</A></B>()</CODE>
+
+<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</TD>
 </TR>
 </TABLE>
 &nbsp;
 <P>
-
-<!-- ========= CONSTRUCTOR DETAIL ======== -->
-
-<A NAME="constructor_detail"><!-- --></A>
-<TABLE BORDER="1" WIDTH="100%" CELLPADDING="3" CELLSPACING="0" SUMMARY="">
-<TR BGCOLOR="#CCCCFF" CLASS="TableHeadingColor">
-<TH ALIGN="left" COLSPAN="1"><FONT SIZE="+2">
-<B>Constructor Detail</B></FONT></TH>
-</TR>
-</TABLE>
-
-<A NAME="InputStreamThread(com.rapplogic.xbee.XBeeConnection, com.rapplogic.xbee.api.XBeeConfiguration)"><!-- --></A><H3>
-InputStreamThread</H3>
-<PRE>
-public <B>InputStreamThread</B>(<A HREF="../../../../com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A>&nbsp;connection,
-                         <A HREF="../../../../com/rapplogic/xbee/api/XBeeConfiguration.html" title="class in com.rapplogic.xbee.api">XBeeConfiguration</A>&nbsp;conf)</PRE>
-<DL>
-</DL>
 
 <!-- ============ METHOD DETAIL ========== -->
 
@@ -229,86 +203,124 @@ public <B>InputStreamThread</B>(<A HREF="../../../../com/rapplogic/xbee/XBeeConn
 </TR>
 </TABLE>
 
-<A NAME="getXBeeConnection()"><!-- --></A><H3>
-getXBeeConnection</H3>
+<A NAME="read(java.lang.String)"><!-- --></A><H3>
+read</H3>
 <PRE>
-public <A HREF="../../../../com/rapplogic/xbee/XBeeConnection.html" title="interface in com.rapplogic.xbee">XBeeConnection</A> <B>getXBeeConnection</B>()</PRE>
+int <B>read</B>(java.lang.String&nbsp;context)
+         throws java.io.IOException</PRE>
 <DL>
 <DD><DL>
-</DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
+</DL>
+<HR>
+
+<A NAME="readRemainingBytes()"><!-- --></A><H3>
+readRemainingBytes</H3>
+<PRE>
+int[] <B>readRemainingBytes</B>()
+                         throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="getFrameDataBytesRead()"><!-- --></A><H3>
+getFrameDataBytesRead</H3>
+<PRE>
+int <B>getFrameDataBytesRead</B>()</PRE>
+<DL>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="getPacketListenerList()"><!-- --></A><H3>
-getPacketListenerList</H3>
+<A NAME="getRemainingBytes()"><!-- --></A><H3>
+getRemainingBytes</H3>
 <PRE>
-public java.util.List&lt;<A HREF="../../../../com/rapplogic/xbee/api/PacketListener.html" title="interface in com.rapplogic.xbee.api">PacketListener</A>&gt; <B>getPacketListenerList</B>()</PRE>
+int <B>getRemainingBytes</B>()</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="getResponseQueue()"><!-- --></A><H3>
-getResponseQueue</H3>
+<A NAME="getBytesRead()"><!-- --></A><H3>
+getBytesRead</H3>
 <PRE>
-public java.util.concurrent.BlockingQueue&lt;<A HREF="../../../../com/rapplogic/xbee/api/XBeeResponse.html" title="class in com.rapplogic.xbee.api">XBeeResponse</A>&gt; <B>getResponseQueue</B>()</PRE>
+int <B>getBytesRead</B>()</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="run()"><!-- --></A><H3>
-run</H3>
+<A NAME="getLength()"><!-- --></A><H3>
+getLength</H3>
 <PRE>
-public void <B>run</B>()</PRE>
+<A HREF="../../../../com/rapplogic/xbee/api/XBeePacketLength.html" title="class in com.rapplogic.xbee.api">XBeePacketLength</A> <B>getLength</B>()</PRE>
 <DL>
-<DD><DL>
-<DT><B>Specified by:</B><DD><CODE>run</CODE> in interface <CODE>java.lang.Runnable</CODE></DL>
-</DD>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="setDone(boolean)"><!-- --></A><H3>
-setDone</H3>
+<A NAME="getApiId()"><!-- --></A><H3>
+getApiId</H3>
 <PRE>
-public void <B>setDone</B>(boolean&nbsp;done)</PRE>
+<A HREF="../../../../com/rapplogic/xbee/api/ApiId.html" title="enum in com.rapplogic.xbee.api">ApiId</A> <B>getApiId</B>()</PRE>
 <DL>
-<DD><DL>
-</DL>
-</DD>
 <DD><DL>
 </DL>
 </DD>
 </DL>
 <HR>
 
-<A NAME="interrupt()"><!-- --></A><H3>
-interrupt</H3>
+<A NAME="getIntApiId()"><!-- --></A><H3>
+getIntApiId</H3>
 <PRE>
-public void <B>interrupt</B>()</PRE>
+int <B>getIntApiId</B>()</PRE>
 <DL>
 <DD><DL>
 </DL>
 </DD>
-<DD><DL>
 </DL>
+<HR>
+
+<A NAME="parseAddress16()"><!-- --></A><H3>
+parseAddress16</H3>
+<PRE>
+<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress16.html" title="class in com.rapplogic.xbee.api">XBeeAddress16</A> <B>parseAddress16</B>()
+                             throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
+</DD>
+</DL>
+<HR>
+
+<A NAME="parseAddress64()"><!-- --></A><H3>
+parseAddress64</H3>
+<PRE>
+<A HREF="../../../../com/rapplogic/xbee/api/XBeeAddress64.html" title="class in com.rapplogic.xbee.api">XBeeAddress64</A> <B>parseAddress64</B>()
+                             throws java.io.IOException</PRE>
+<DL>
+<DD><DL>
+
+<DT><B>Throws:</B>
+<DD><CODE>java.io.IOException</CODE></DL>
 </DD>
 </DL>
 <!-- ========= END OF CLASS DATA ========= -->
@@ -341,11 +353,11 @@ public void <B>interrupt</B>()</PRE>
 
 <TR>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/HardwareVersion.RadioType.html" title="enum in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
-&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/IPacketParser.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/InputStreamThread.html" title="class in com.rapplogic.xbee.api"><B>PREV CLASS</B></A>&nbsp;
+&nbsp;<A HREF="../../../../com/rapplogic/xbee/api/IXBee.html" title="interface in com.rapplogic.xbee.api"><B>NEXT CLASS</B></A></FONT></TD>
 <TD BGCOLOR="white" CLASS="NavBarCell2"><FONT SIZE="-2">
-  <A HREF="../../../../index.html?com/rapplogic/xbee/api/InputStreamThread.html" target="_top"><B>FRAMES</B></A>  &nbsp;
-&nbsp;<A HREF="InputStreamThread.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
+  <A HREF="../../../../index.html?com/rapplogic/xbee/api/IPacketParser.html" target="_top"><B>FRAMES</B></A>  &nbsp;
+&nbsp;<A HREF="IPacketParser.html" target="_top"><B>NO FRAMES</B></A>  &nbsp;
 &nbsp;<SCRIPT type="text/javascript">
   <!--
   if(window==top) {
@@ -362,9 +374,9 @@ public void <B>interrupt</B>()</PRE>
 </TR>
 <TR>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_summary">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
+  SUMMARY:&nbsp;NESTED&nbsp;|&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_summary">METHOD</A></FONT></TD>
 <TD VALIGN="top" CLASS="NavBarCell3"><FONT SIZE="-2">
-DETAIL:&nbsp;FIELD&nbsp;|&nbsp;<A HREF="#constructor_detail">CONSTR</A>&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
+DETAIL:&nbsp;FIELD&nbsp;|&nbsp;CONSTR&nbsp;|&nbsp;<A HREF="#method_detail">METHOD</A></FONT></TD>
 </TR>
 </TABLE>
 <A NAME="skip-navbar_bottom"></A>
